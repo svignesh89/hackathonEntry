@@ -1,0 +1,11 @@
+language: java 
+deploy: 
+    edge: true 
+   provider: cloudfoundry 
+    username: harish.dalmia@one.verizon.com 
+    password: Welcome@1
+    api: https://api.run.pivotal.io 
+   organization: Verizon-Acss 
+   space: development 
+    on: 
+    all_branches: true 

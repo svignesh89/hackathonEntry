@@ -1,0 +1,4 @@
+--- 
+2 applications: 
+3 - name: HackathonTest 
+4   path: ./build/HackathonTest.war 
