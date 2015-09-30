@@ -19,7 +19,7 @@ Ext.define('MVC.controller.LoginController',{
 	       var passWd = data.password;
 	       if(LoginAsVal == 'CU')
 	       {
-	    	 if(userName == 'testuser' && passWd == '12345')  
+	    	 if((userName == 'usr1' && passWd == 'pass1') || (userName == 'usr2' && passWd == 'pass2'))  
 	    		 {
 	    		    //Ext.Msg.alert('Status', 'Logged in  successfully.');
 					Ext.MessageBox.show({
@@ -44,7 +44,7 @@ Ext.define('MVC.controller.LoginController',{
 	       }
 	       else
 	    	   {
-				   if(userName == 'rep1' && passWd == 'pass1')  
+				   if((userName == 'rep1' && passWd == 'pass1') || (userName == 'rep2' && passWd == 'pass2'))  
 	    		 {
 	    		    //Ext.Msg.alert('Status', 'Logged in  successfully.');
 					Ext.MessageBox.show({

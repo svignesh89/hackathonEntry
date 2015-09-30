@@ -39,7 +39,7 @@ Ext.define('MVC.view.Login', {
     	        model: 'MVC.model.LoginAs',
     	        data: [
     	            [ 'Customer', 'CU'],
-    	            [ 'Customer Rep', 'CR']
+    	            [ 'Representative', 'CR']
     	            
     	        ]
     	    }
