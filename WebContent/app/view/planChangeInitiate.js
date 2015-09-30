@@ -157,7 +157,7 @@ Ext.onReady(function() {
 															if (form.isValid()) { // make sure the form contains valid data before submitting
 																var oldPlanId=formData.OldPlanId;
 																var NewPlanId=formData.NewPlanId;
-																if(NewPlanId !='7652' || NewPlanId !='2132'){
+																if(NewPlanId !='7652' && NewPlanId !='2132'){
 																	myForm.close();
 																    Ext.Msg.alert('Information', 'You have been redirected to pre confirmation page to validate the values.');
 																	callMyForm(true,

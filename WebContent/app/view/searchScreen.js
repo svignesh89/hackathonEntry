@@ -1,12 +1,13 @@
 			var mainFunction =function(){
 
-			Ext.create('Ext.form.Panel', {
+			 var searchForm =Ext.create('Ext.form.Panel', {
 
 										formMode : 'edit',										
 										title : 'Search Page',
-										height : 400,
-										width : 600,
+										height : 600,
+										width : 1000,
 										bodyPadding : 10,
+										autoScroll:true,
 										style : 'margin: 50px',
 										//id : 'mainForm',
 										defaultType : 'textfield',
@@ -121,6 +122,61 @@
 
 										
 
-									});
+									}); 
+									new Ext.Viewport({
+    layout: 'border',
+    items: [{
+        region: 'north',
+        items: [
+				{
+					xtype :'image',
+				////autoE1='div',
+					height:100,
+					width :150,					
+					src : "app/Images/vvvv.png"	,
+					margin: '30 0 0 100'
+},
+{
+				xtype:'button',
+				text   : 'Log out',
+				margin: '50 50 75 150',
+				listeners:{
+				click: function()
+				{
+					window.location = 'index.html';
+				}
+	   }
+	   }
+		]
+    }, {
+        region: 'center',        
+		items: [searchForm]
+        // the west region might typically utilize a TreePanel or a Panel with Accordion layout
+    }/*,  {
+        region: 'east',
+       items: [
+			{
+				xtype:'button',
+				text   : 'Log out',
+				listeners:{
+				click: function()
+				{
+					window.location = 'index.html';
+				}
+	   }
+	   }]
+       
+        // remaining grid configuration not shown ...
+        // notice that the GridPanel is added directly as the region
+        // it is not "overnested" inside another Panel
+    }, {
+        region: 'center',
+        xtype: 'tabpanel', // TabPanel itself has no title
+        items: {
+            title: 'Default Tab',
+            html: 'The first tab\'s content. Others may be added dynamically'
+        }
+    }*/]
+});
 			}
 Ext.onReady(mainFunction);
