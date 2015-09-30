@@ -48,23 +48,25 @@ public class FlatFileRead extends HttpServlet {
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			StringBuffer stringBuffer = new StringBuffer();
-			String line;
-			while ((line = bufferedReader.readLine()) != null) {
-				JSONObject Login = new JSONObject();				
-				stringBuffer.append(line);
-				try {
-					Login.put("Line", line);					
-					data.put(Login);
+			String line;			
+			if(oPIN != null && !oPIN.trim().isEmpty()) {
+				while ((line = bufferedReader.readLine()) != null) {
+					JSONObject Login = new JSONObject();				
+					stringBuffer.append(line);
+					try {
+						Login.put("Line", line);					
+						data.put(Login);
+						
+						//System.out.println("Data--- " +data);
+						
+						stringBuffer.append("\n");
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}	
 					
-					//System.out.println("Data--- " +data);
 					
-					stringBuffer.append("\n");
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}	
-				
-				
+				}
 			}
 			try {
 				jsonResponse.put("success", "true");

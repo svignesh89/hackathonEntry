@@ -64,17 +64,31 @@ public class FlatFileWrite extends HttpServlet {
 
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);
-			bw.write("OLD PLAN ID - " + oldPlanId);
-			bw.newLine();
-			
-			bw.write("NEW PLAN ID - " + newPlanId);
-			bw.newLine();
-			
-			bw.write("ERROR MESSAGE - PLAN IS NOT COMPATIBLE");
-			bw.newLine();
-			
-			bw.write("ERROR DESCRIPTION - This plan is not compatible currently with the customer's device");
-			bw.newLine();
+			if(newPlanId.equalsIgnoreCase("7652")) {
+				bw.write("Old Plan ID - " + oldPlanId);
+				bw.newLine();
+				
+				bw.write("New Plan ID - " + newPlanId);
+				bw.newLine();
+				
+				bw.write("Failed reason - Plan selected is not compatible");
+				bw.newLine();
+				
+				bw.write("Failed description - The plan selected was not compatible with the customer's device");
+				bw.newLine();
+			} else if(newPlanId.equalsIgnoreCase("2132")) {
+				bw.write("Old Plan ID - " + oldPlanId);
+				bw.newLine();
+				
+				bw.write("New Plan ID - " + newPlanId);
+				bw.newLine();
+				
+				bw.write("Failed reason - Plan selected cannot be availed now");
+				bw.newLine();
+				
+				bw.write("Failed description - The new plan selected should not be availed in last three months. User has already opted for this plan in last three months. ");
+				bw.newLine();
+			}
 			
 			bw.close();
 			try {
