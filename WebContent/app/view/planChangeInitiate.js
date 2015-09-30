@@ -29,7 +29,7 @@ Ext.onReady(function() {
 											height:100,
 											width :100,
 											id:'logo',
-											src : "http://localhost:8080/HackathonTest/app/Images/vvvv.png"	,
+											src : "app/Images/vvvv.png"	,
 											margin: '0 0 50 20'
 										},  
 										
