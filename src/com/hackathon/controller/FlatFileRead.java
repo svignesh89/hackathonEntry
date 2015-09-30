@@ -43,7 +43,8 @@ public class FlatFileRead extends HttpServlet {
 		JSONArray data = new JSONArray();
 		try {
 			JSONObject jsonResponse = new JSONObject();
-			File file = new File("D:/Flatfile/"+oPIN+".txt");
+			File file = new File(oPIN+".txt");
+			//File file = new File("D:/Flatfile/"+oPIN+".txt");
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			StringBuffer stringBuffer = new StringBuffer();

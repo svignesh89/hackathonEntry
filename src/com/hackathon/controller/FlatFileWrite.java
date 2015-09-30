@@ -46,6 +46,7 @@ public class FlatFileWrite extends HttpServlet {
 		// TODO Auto-generated method stub
 		String oldPlanId = request.getParameter("oldPlanId");
 		String newPlanId = request.getParameter("newPlanId");
+		System.out.println("new plan id --> " + newPlanId);
 		JSONObject jsonResponse = new JSONObject();
 		try {
 			JSONArray data = new JSONArray();
@@ -53,8 +54,9 @@ public class FlatFileWrite extends HttpServlet {
 			String content = "This is the content to write into file";
 			Random ran = new Random();
 			int rnum = 100000 + ran.nextInt(900000);
-			File file = new File("D:/Flatfile/"+rnum+".txt");
-			System.out.println("");
+			//System.out.println("Get Contex path --- " + request.getServletContext().getRealPath("user.dir"));
+			File file = new File(rnum+".txt");
+//			File file = new File("D:/Flatfile/"+rnum+".txt");
 			// if file doesnt exists, then create it
 			if (!file.exists()) {
 				file.createNewFile();
