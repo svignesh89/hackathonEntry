@@ -5,7 +5,7 @@
 										formMode : 'edit',										
 										title : 'Search Page',
 										height : 500,
-										width : 1000,
+										width : 800,
 										bodyPadding : 10,
 										autoScroll:true,
 										style : 'margin: 50px',
@@ -110,7 +110,22 @@
 																	});
 															}
 													   }
-													}]	}										
+													}
+													
+													
+												/* 	{
+				
+														xtype :'image',
+													////autoE1='div',
+														height:150,
+														width :300,					
+														src : "app/Images/rep1.jpg"	,
+														margin: '30 0 0 100'
+													
+
+													} */
+													
+													]	}										
 												
 										 ,
 										 									 
@@ -171,7 +186,20 @@
         region: 'center',        
 		items: [searchForm]
         // the west region might typically utilize a TreePanel or a Panel with Accordion layout
-    }/*,  {
+    },
+	{
+        region: 'east',        
+		items: [{xtype :'image',
+					////autoE1='div',
+						height:300,
+						width :500,					
+						src : "app/Images/rep1.jpg"	,
+						margin: '30 0 0 100'
+		}]
+        
+    }
+	
+	/*,  {
         region: 'east',
        items: [
 			{
