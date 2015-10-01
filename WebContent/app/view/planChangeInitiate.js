@@ -12,7 +12,7 @@ Ext.onReady(function() {
 										layout : 'form',
 										title : 'Plan Change Form',
 										height : 450,
-										width : 600,
+										//width : 600,
 										bodyPadding : 10,
 										style : 'margin: 200px',
 										//id : 'mainForm',
@@ -145,11 +145,19 @@ Ext.onReady(function() {
 																height :100,
 																closable : false,
 																buttons : Ext.Msg.OK,
-																buttonText : 
+																fn: function(buttonId) {
+																	if (buttonId === "ok") {
+																		window.location="index2.html";
+																	}
+																}
+
+																/* buttonText : 
 																{
 																	OK : 'Okay',
 																   
-																}
+																} */
+																
+																
 															});
 															
 														} 
@@ -157,6 +165,7 @@ Ext.onReady(function() {
 															if (form.isValid()) { // make sure the form contains valid data before submitting
 																var oldPlanId=formData.OldPlanId;
 																var NewPlanId=formData.NewPlanId;
+																
 																if(NewPlanId !='7652' && NewPlanId !='2132'){
 																	myForm.close();
 																    Ext.Msg.alert('Information', 'You have been redirected to pre confirmation page to validate the values.');
@@ -180,7 +189,7 @@ Ext.onReady(function() {
 																			// process server response here
 																			Ext.Msg.show({
 																				title : 'Call Us',
-																				msg : 'Dear User, your one time passcode(OTP) is <b><u><font color=green >'+oPin +'</font></u></b></span>. <br/>Kindly save this unique number and call us on 1-200-400-600 to serve you better. It is valid for 15 minutes ',
+																				msg : 'Dear Customer,your plan change transaction is failed.<br/> Your one time passcode(OTP) is <b><u><font color=green >'+oPin +'</font></u></b></span>. Kindly save this unique number and call us on +1-813-617-4294 to serve you better. It is valid for 15 minutes ',
 																				width : 500,
 																				height :200,
 																				closable : false,
@@ -190,6 +199,8 @@ Ext.onReady(function() {
 																					OK : 'Okay',
 																				   
 																				}
+																				//listeners:{
+																				
 																			});
 																		}
 																	});
@@ -240,17 +251,17 @@ Ext.onReady(function() {
 				myForm.show();
 																new Ext.Viewport({
 		    layout: 'border',
-			bodyStyle : 'background-color :black;',
+			bodyStyle : 'background-color :white;',
 		    items: [{
 		        region: 'north',
-		    	bodyStyle : 'background-color :black;',
+		    	bodyStyle : 'background-color :white;',
 		        items: [
 				{
 					xtype :'image',
 				////autoE1='div',
 					height:150,
 					width :300,					
-					src : "app/Images/verizon_black.jpg"	,
+					src : "app/Images/nvzw.png"	,
 					margin: '30 0 0 100'
 },
 {

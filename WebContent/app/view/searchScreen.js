@@ -11,11 +11,15 @@
 										style : 'margin: 50px',
 										//id : 'mainForm',
 										defaultType : 'textfield',
-										bodyStyle : 'background-color :LightCyan;',
+										bodyStyle : 'background-color :Cornsilk;',
 										border : true,
+										//layout :'hbox'	,
 										renderTo : document.body,
 										items : [								 
-																					
+													{
+													xtype:'container',
+													layout:'hbox',
+													items:[
 										
 													{								
 													
@@ -31,7 +35,7 @@
 													style: 'margin-left:50px;',
 													text   : 'Search',
 													itemId : 'GetRecord',
-													margin :'12 20 30 40',
+													//margin :'12 20 30 40',
 													listeners: {
 															click: function ()
 															{
@@ -106,7 +110,7 @@
 																	});
 															}
 													   }
-													}											
+													}]	}										
 												
 										 ,
 										 									 
@@ -116,9 +120,11 @@
 										id: 'resultPanel',
 										//style: 'margin-left:50px;',
 										//text   : 'Search',
+										margin :'20 0 0 0 ',
 										title : 'Search Results',
 										bodyStyle : 'background-color :Cornsilk;',
 										frame: true	,
+										//layout:'vbox',
 										hidden: true
 													
 										}	
@@ -135,7 +141,7 @@
     items: [
 	{
         region: 'north',
-		bodyStyle : 'background-color :black;',
+		bodyStyle : 'background-color :white;',
         items: [
 
 					{
@@ -144,7 +150,7 @@
 					////autoE1='div',
 						height:150,
 						width :300,					
-						src : "app/Images/verizon_black.jpg"	,
+						src : "app/Images/nvzw.png"	,
 						margin: '30 0 0 100'
 					
 

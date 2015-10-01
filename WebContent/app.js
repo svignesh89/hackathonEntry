@@ -30,14 +30,14 @@ Ext.application({
 			{
 				
 				region: 'north',			
-		    	bodyStyle : 'background-color :black;',
+		    	bodyStyle : 'background-color :white;',
 		        items: [
 					{
 						xtype :'image',
 					////autoE1='div',
 						height:150,
 						width :300,					
-						src : "app/Images/verizon_black.jpg"	,
+						src : "app/Images/nvzw.png"	,
 						margin: '30 0 0 100'
 					}
 				]

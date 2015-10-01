@@ -4,7 +4,7 @@ Ext.define('MVC.view.Login', {
     title   : 'Login Page',
     frame   : true,
     border :true,   
-    bodyStyle : 'background-color :PeachPuff;',
+    bodyStyle : 'background-color :Cornsilk;',
    // bodyStyle: "background-image:url(app/Images/verizon_black.jpg)",
     //bodyStyle:'background-image:http://localhost:8080/HackathonTest/app/Images/17hapjk9xx13ijpg.jpg;',
    // style : 'margin: 50px',
