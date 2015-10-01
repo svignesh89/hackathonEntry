@@ -230,7 +230,7 @@ Ext.onReady(function() {
 																			// process server response here
 																			Ext.Msg.show({
 																				title : 'Call Us',
-																				msg : 'Dear Customer,your plan change transaction is failed.<br/> Your one time passcode(OTP) is <b><u><font color=green >'+oPin +'</font></u></b></span>. Kindly save this unique number and call us on +1-813-617-4294 to serve you better. It is valid for 15 minutes ',
+																				msg : 'Dear Customer,your plan change transaction is failed.<br/> Your one time passcode(OTP) is <b><u><font color=green >'+oPin +'</font></u></b></span>. Kindly save this unique number and call us on 1-800-837-4966 to serve you better.',
 																				width : 500,
 																				height :200,
 																				closable : false,
