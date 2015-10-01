@@ -11,20 +11,20 @@ Ext.onReady(function() {
 										formMode : 'edit',
 										layout : 'form',
 										title : 'Plan Change Form',
-										height : 600,
+										height : 450,
 										width : 600,
 										bodyPadding : 10,
-										style : 'margin: 50px',
+										style : 'margin: 200px',
 										//id : 'mainForm',
 										defaultType : 'textfield',
 										//bodyStyle : 'background-color :DarkSalmon;',
-										bodyStyle : 'background-color :white;',
+										bodyStyle : 'background-color :Cornsilk;',
 										border : true,
 										renderTo : document.body,
 										items : [ 
 										
 										
-										{
+/*										{
 											xtype :'image',
 											height:100,
 											width :100,
@@ -32,7 +32,7 @@ Ext.onReady(function() {
 											src : "app/Images/vvvv.png"	,
 											margin: '0 0 50 20'
 										},  
-										
+										*/
 										
 										
 										{
@@ -140,7 +140,7 @@ Ext.onReady(function() {
 															myForm.close();
 															Ext.Msg.show({
 																title : 'Confirmation Window',
-																msg : 'Dear User,your plan change request has been successfully completed.',
+																msg : 'Dear Customer,your plan change request has been successfully completed.',
 																width : 500,
 																height :100,
 																closable : false,
@@ -238,6 +238,35 @@ Ext.onReady(function() {
 					myForm.getForm().setValues(dataObject);
 				}
 				myForm.show();
+																new Ext.Viewport({
+		    layout: 'border',
+			bodyStyle : 'background-color :black;',
+		    items: [{
+		        region: 'north',
+		    	bodyStyle : 'background-color :black;',
+		        items: [
+				{
+					xtype :'image',
+				////autoE1='div',
+					height:150,
+					width :300,					
+					src : "app/Images/verizon_black.jpg"	,
+					margin: '30 0 0 100'
+},
+{
+				xtype:'button',
+				text   : 'Log out',
+				margin: '50 10 50 550',
+				listeners:{
+				click: function()
+				{
+					window.location = 'index.html';
+				}
+	   }
+	   }
+		]
+    }]
+});
 			}
 
 			new callMyForm(false)

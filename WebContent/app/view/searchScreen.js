@@ -4,7 +4,7 @@
 
 										formMode : 'edit',										
 										title : 'Search Page',
-										height : 600,
+										height : 500,
 										width : 1000,
 										bodyPadding : 10,
 										autoScroll:true,
@@ -60,27 +60,32 @@
 																			searchPanel.removeAll();
 																			searchPanel.add({
 																				xtype: 'displayfield',
+																				margin: '30 0 0 50',
 																				//fieldLabel: 'Home',
 																				name: 'home_score',
 																				value: dataResp
 																			});
 																			searchPanel.add({
 																				xtype: 'displayfield',
+																				margin: '0 0 0 50',
 																				//fieldLabel: 'Home',
 																				name: 'home_score',
 																				value: dataResp2
 																			});
 																			searchPanel.add({
 																				xtype: 'displayfield',
+																				margin: '0 0 0 50',
 																				//fieldLabel: 'Home',
 																				name: 'home_score',
 																				value: dataResp3
 																			});
 																			searchPanel.add({
 																				xtype: 'displayfield',
+																				margin: '0 0 0 50',
 																				//fieldLabel: 'Home',
 																				name: 'home_score',
-																				value: dataResp4
+																				value: dataResp4,
+																				height :180
 																			});
 																		}
 																		else
@@ -90,7 +95,9 @@
 																				xtype: 'displayfield',
 																				//fieldLabel: 'Home',
 																				name: 'home_score',
-																				value: 'Sorry there is no data to display !!'
+																				margin: '50',
+																				value: '  Sorry there is no data to display !!',
+																				height :200
 																			});
 																			
 																		}
@@ -110,7 +117,7 @@
 										//style: 'margin-left:50px;',
 										//text   : 'Search',
 										title : 'Search Results',
-										bodyStyle : 'background-color :pink;',
+										bodyStyle : 'background-color :Cornsilk;',
 										frame: true	,
 										hidden: true
 													
@@ -125,29 +132,35 @@
 									}); 
 									new Ext.Viewport({
     layout: 'border',
-    items: [{
+    items: [
+	{
         region: 'north',
+		bodyStyle : 'background-color :black;',
         items: [
+
+					{
+				
+						xtype :'image',
+					////autoE1='div',
+						height:150,
+						width :300,					
+						src : "app/Images/verizon_black.jpg"	,
+						margin: '30 0 0 100'
+					
+
+					},
 				{
-					xtype :'image',
-				////autoE1='div',
-					height:100,
-					width :150,					
-					src : "app/Images/vvvv.png"	,
-					margin: '30 0 0 100'
-},
-{
-				xtype:'button',
-				text   : 'Log out',
-				margin: '50 50 75 150',
-				listeners:{
-				click: function()
-				{
-					window.location = 'index.html';
+					xtype:'button',
+					text   : 'Log out',
+					margin: '100 10 50 550',
+					listeners:{
+					click: function()
+						{
+							window.location = 'index.html';
+						}
+					}
 				}
-	   }
-	   }
-		]
+			]
     }, {
         region: 'center',        
 		items: [searchForm]

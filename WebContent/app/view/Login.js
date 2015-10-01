@@ -4,7 +4,7 @@ Ext.define('MVC.view.Login', {
     title   : 'Login Page',
     frame   : true,
     border :true,   
-    bodyStyle : 'background-color :white;',
+    bodyStyle : 'background-color :PeachPuff;',
    // bodyStyle: "background-image:url(app/Images/verizon_black.jpg)",
     //bodyStyle:'background-image:http://localhost:8080/HackathonTest/app/Images/17hapjk9xx13ijpg.jpg;',
    // style : 'margin: 50px',
@@ -17,24 +17,25 @@ Ext.define('MVC.view.Login', {
     
     items : [
              
-{
+/* {
 	xtype :'image',
 	////autoE1='div',
 	height:150,
-	width :750,
+	width :300,
 	id:'logo',
-	src : "app/Images/vvvv.png"	,
-	margin: '0 0 30 100'
-},    
+	src : "app/Images/verizon_black.jpg"	,
+	margin: '0 0 30 0'
+},  */   
        {
     	 name: 'LoginAsValue',
     	 fieldLabel: 'Login As',
-		 margin: '10 50 15 300',
+		 margin: '40 50 15 500',
     	    //hiddenName: 'myComboId',
     	    xtype: 'combo',
     	    queryMode:'local',
     	    valueField: 'id',
     	    displayField: 'name',
+    	    editable:false,
     	    store: {
     	        model: 'MVC.model.LoginAs',
     	        data: [
@@ -48,21 +49,21 @@ Ext.define('MVC.view.Login', {
             xtype: 'textfield',
             name: 'username',
             fieldLabel: 'Username',
-			margin: '10 50 15 300',
+			margin: '10 50 15 500',
             align :'center',
             pack :'center',
             allowBlank: false
         }, {
             xtype: 'textfield',
             name: 'password',
-			margin: '10 50 15 300',
+			margin: '10 50 15 500',
             inputType: 'password',
             fieldLabel: 'Password',
             allowBlank: false
         }, 
         {
             xtype  : 'button',
-			margin: '10 50 50 400',
+			margin: '10 50 50 650',
             text   : 'Log in',
             itemId : 'CheckLogin'            
         }

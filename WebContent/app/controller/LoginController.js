@@ -21,20 +21,8 @@ Ext.define('MVC.controller.LoginController',{
 	       {
 	    	 if((userName == 'usr1' && passWd == 'pass1') || (userName == 'usr2' && passWd == 'pass2'))  
 	    		 {
-	    		    //Ext.Msg.alert('Status', 'Logged in  successfully.');
-					Ext.MessageBox.show({
-							title: "Login Information",
-							msg: "Dear User,You have been successfully logged in. Kindly click ok button to proceed",
-							//icon: Ext.MessageBox.WARNING,
-							buttons: Ext.MessageBox.OK,
-							fn: function(buttonId) {
-								if (buttonId === "ok") {
-									window.location = 'index2.html';
-								}
-							}
-						});	
-				
-					//window.location = 'index2.html';
+	    		    window.location = 'index2.html';
+					
 	    		    
 	    		 }
 	    	 else
@@ -46,20 +34,7 @@ Ext.define('MVC.controller.LoginController',{
 	    	   {
 				   if((userName == 'rep1' && passWd == 'pass1') || (userName == 'rep2' && passWd == 'pass2'))  
 	    		 {
-	    		    //Ext.Msg.alert('Status', 'Logged in  successfully.');
-					Ext.MessageBox.show({
-							title: "Login Information",
-							msg: "Dear User,You have been successfully logged in. Kindly Click ok to proceed",
-							buttons: Ext.MessageBox.OK,
-							fn: function(buttonId) {
-								if (buttonId === "ok") {
-									window.location = 'index3.html';
-									
-									 					}
-							}
-						});	
-				
-					//window.location = 'index2.html';
+	    		 window.location = 'index3.html';
 	    		    
 	    		 }
 	    	 else
