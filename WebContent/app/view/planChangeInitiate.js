@@ -36,16 +36,54 @@ Ext.onReady(function() {
 										
 										
 										{
+											/* //xtype :'numberfield',
 											fieldLabel : 'OldPlanId',
 											name : 'OldPlanId',
 											cls : 'field-margin',
+											maxLength: 8,           //Set max length validation
+											maskRe:/[0-9.]/ ,
 											labelStyle : 'font-weight:bold',
 											allowBlank :false,
-											disabled : readOnlyForm
+											disabled : readOnlyForm */
+											
+											
+											
+											xtype:'combo',
+											fieldLabel : 'OldPlanId',
+											name : 'OldPlanId',
+											valueField: 'OldPlanId',
+											queryMode:'local',
+											emptyText: 'OldPlanId',
+											store:['8249','2137'],
+											displayField:'OldPlanId',
+											labelStyle : 'font-weight:bold',
+											disabled : readOnlyForm,
+											//required :y
+											//autoSelect:true,
+											forceSelection:true	,
+											editable :false,
+											//readOnly :true
+											listeners :{
+												select :function(cmp){
+													//alert(cmp.getValue());
+													var planId=cmp.getValue();
+													var oldPlanDescr=Ext.getCmp('oldPlanDesc');
+													if(planId =='8249'){
+															oldPlanDescr.setValue("Nation wide basic plan");
+													}
+													else if (planId =='2137'){
+														oldPlanDescr.setValue("Nation wide 20 text and 150 MB data plan");
+													}
+													
+												}
+											}
 										}, {
 											fieldLabel : 'OldPlanDescription',
 											name : 'OldPlanDescription',
+											id :'oldPlanDesc',
+											//emptyText: 'OldPlanDescription',
 											labelStyle : 'font-weight:bold',
+											readOnly :true,
 											disabled : readOnlyForm
 										}, {
 											xtype:'combo',
@@ -106,6 +144,7 @@ Ext.onReady(function() {
 											id:'newPlDesc',
 											name : 'NewPlanDescription',
 											labelStyle : 'font-weight:bold',
+											//emptyText: 'NewPlanDescription',
 											readOnly :true,
 											disabled : readOnlyForm
 										}, {
@@ -113,6 +152,7 @@ Ext.onReady(function() {
 											fieldLabel : 'EmailAddress',
 											name : 'EmailAddress',
 											columnWidth : 0.6,
+											emptyText: 'Enter the email address as abc@gmail.com',
 											vtype : 'email',
 											labelStyle : 'font-weight:bold',
 											disabled : readOnlyForm
@@ -121,6 +161,7 @@ Ext.onReady(function() {
 											grow : true,
 											fieldLabel : 'Remarks',
 											name : 'Remarks',
+											//emptyText:'Update the comment here, if any',
 											labelStyle : 'font-weight:bold',
 											disabled : readOnlyForm
 										}, ],
